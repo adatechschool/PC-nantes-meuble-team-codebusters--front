@@ -8,7 +8,7 @@ export default function Cards() {
   const result = data.map((furniture) => (furniture.category))
 
     return(
-      <div class="card bg-dark text-white">
+      <div class="card bg-dark text-white" >
         <img src={chair} class="card-img" alt="..." />
         <div class="card-img-overlay">
         <h5 class="card-title fs-2 fw-bold">{result}</h5>
