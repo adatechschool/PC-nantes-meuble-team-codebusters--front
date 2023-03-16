@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+	font-family: 'riesling';
+  src: url('./assets/fonts/riesling.ttf');
+}
+
+@font-face {
+	font-family: 'Vintage';
+  src: url('./assets/fonts/Vintage.ttf');
+}
