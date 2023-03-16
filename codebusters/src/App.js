@@ -5,10 +5,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Gallery from './components/Gallery';
 
 
+
 export default function App() {
   return (
     <div className="App">
-      <Gallery />
+      <IconFavorite />
     </div>
   );
 }
