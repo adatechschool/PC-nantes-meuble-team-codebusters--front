@@ -14,7 +14,7 @@ const buttonStyle={
     background:"none",
     cursor:"pointer"
 }
-function heartButton (){
+function IconFavorite (){
     return(
         <div>
             <Button variant="outline-light" style={buttonStyle}>
@@ -23,4 +23,4 @@ function heartButton (){
         </div>
     )
 }
-export default heartButton;
+export default IconFavorite;
