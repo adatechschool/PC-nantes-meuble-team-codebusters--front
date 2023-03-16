@@ -6,7 +6,7 @@ export function Api(){
     useEffect(() => {
         async function fetchDataGit(){
             try{
-                const response = await fetch("http://localhost:4000/furnitures");
+                const response = await fetch("http://localhost:4000/furnitures?availability=true");
                 const data = await response.json();
                 setData(data);
             } catch (error){

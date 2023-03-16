@@ -1,0 +1,36 @@
+.footer{
+    background-color: rgba(154, 113, 85, 0.2);
+    padding-top:3em;
+    padding-bottom:3em;
+    border-top:0.1em solid rgb(226, 226, 226);
+}
+
+.ul-footer{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0;
+}
+
+.li-footer{
+    list-style-type:none;
+    width:30%;
+}
+.p-footer{
+    margin:0;
+    padding:0;
+}
+
+.title-footer{
+    font-size:20px;
+}
+.contact-footer{
+    padding-bottom:0.5em;
+}
+
+.sociaux{
+    display:flex;
+    font-size:2.7em;
+    justify-content: center;
+    width:40%;
+}
