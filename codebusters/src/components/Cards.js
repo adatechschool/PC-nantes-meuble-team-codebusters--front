@@ -1,11 +1,8 @@
-
-import chair from '../assets/chair.jpg'
-
 import {Api} from '../data/Api.js'
 
 const cardStyle = {
   display:"flex",
-  width:"80%",
+  width:"90%",
   margin:"auto",
 }
 
