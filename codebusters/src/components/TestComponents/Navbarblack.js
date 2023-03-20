@@ -18,12 +18,12 @@ function Navbarblack () {
     return (
       <Navbar bg="white" variant="white">
       <Container style={{marginRight: "8em"}}>
-        <Navbar.Brand href="#home"><Menublack/></Navbar.Brand>
+        <Navbar.Brand href="/"><Menublack/></Navbar.Brand>
         <Nav style={nav} className="me-auto">
           <Nav.Link href="#home"><Searchblack/></Nav.Link>
           <Nav.Link href="#features"><IconFavoriteblack/></Nav.Link>
           <Nav.Link href="#pricing"><Panierblack/></Nav.Link>
-          <Nav.Link href="#pricing"><UserButtonBlack/></Nav.Link>
+          <Nav.Link href="/login"><UserButtonBlack/></Nav.Link>
         </Nav>
       </Container>
     </Navbar>

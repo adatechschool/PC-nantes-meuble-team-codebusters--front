@@ -23,7 +23,7 @@ function Headerwhite () {
     return (
     <Navbar style={styleNavbar} expand="lg">
       <Container style={{marginRight: "8em"}}>
-        <Navbar.Brand href="#home"><Menuwhite/></Navbar.Brand>
+        <Navbar.Brand href="/"><Menuwhite/></Navbar.Brand>
         <Nav style={nav} className="me-auto">
           <Nav.Link href="#home"><Searchwhite/></Nav.Link>
           <Nav.Link href="#features"><IconFavorite/></Nav.Link>

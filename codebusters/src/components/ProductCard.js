@@ -17,6 +17,8 @@ const cardUnique={
   borderRadius:"1em",
 }
 
+
+
 const imgUnique = {
   width:"100%",
   height:"100%",
@@ -27,7 +29,7 @@ const imgUnique = {
 
 export default function Cards() {
   const data = Api();
-  //console.log(data);
+  console.log(data[0]);
     return(
       <div style={cardStyle}>
        (
