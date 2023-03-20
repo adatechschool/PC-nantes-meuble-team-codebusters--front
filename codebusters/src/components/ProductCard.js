@@ -28,8 +28,11 @@ const textUnique = {
   textTransform: "uppercase",
   color: "black",
   textAlign: "center",
-  padding: "0",
-  
+  padding: "30px",
+  border: "1px solid black",
+  boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
+  padding:"10px",
+  borderRadius:"1em", 
 };
 
 const titleUnique = {
@@ -71,7 +74,7 @@ export default function Cards() {
         <br></br>
         <br></br>
         <br></br>
-        <div style={textUnique}>
+        <div>
         {textfurniture[0]}
         </div>
       </div>

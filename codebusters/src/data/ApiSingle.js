@@ -6,7 +6,7 @@ export function Api(){
     useEffect(() => {
         async function fetchDataGit(){
             try{
-                const response = await fetch{("http://localhost:4000/furnitures/'{product?$_id")};
+                const response = await fetch("http://localhost:4000/furnitures?availability=true");
                 const data = await response.json();
                 console.log(data)
                 setData(data);
