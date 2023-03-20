@@ -2,7 +2,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
 const heartStyle = {
     color: 'white',
-    fontSize:'1em',
     background:"none",
     width:"35.14px",
     height:"32px",

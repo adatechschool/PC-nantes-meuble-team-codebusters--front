@@ -7,6 +7,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+const styleNavbar = {
+  position: "fixed",
+  zIndex: 10,
+  width: "100%",
+};
 
 const nav = {
   marginLeft: "53em",
@@ -16,14 +21,14 @@ const nav = {
 function Headerwhite () {
 
     return (
-      <Navbar bg="none" variant="none" style={{position: 'fixed', zIndex: 10, width: '100%' }}>
+    <Navbar style={styleNavbar} expand="lg">
       <Container style={{marginRight: "8em"}}>
         <Navbar.Brand href="#home"><Menuwhite/></Navbar.Brand>
         <Nav style={nav} className="me-auto">
           <Nav.Link href="#home"><Searchwhite/></Nav.Link>
           <Nav.Link href="#features"><IconFavorite/></Nav.Link>
           <Nav.Link href="#pricing"><Panierwhite/></Nav.Link>
-          <Nav.Link href="#pricing"><UserButtonWhite/></Nav.Link>
+          <Nav.Link href="/login"><UserButtonWhite/></Nav.Link>
         </Nav>
       </Container>
     </Navbar>

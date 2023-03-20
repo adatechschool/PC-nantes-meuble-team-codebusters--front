@@ -4,13 +4,19 @@ import Footer from './components/footer/Footer';
 import Cards from './components/Cards'
 import Headerwhite from './components/HeaderWhite';
 
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Home from './pages/Home';
+
 
 export default function App() {
   return (
     <div className="App" style = {{backgroundColor: "#FBF4F4"}}>
-      <Headerwhite />
-      <Cards />
-      <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
     </div>
   );
 }
