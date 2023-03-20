@@ -19,15 +19,15 @@ const cardUnique={
 
 const textUnique = {
   textTransform:"uppercase",
-  color:"white",
-  textShadow:"0 0 0.2em #000000",
+  color:"black",
   textAlign:"center",
   padding:"0",
+  paddingTop:"0.5em",
 }
 
 const imgUnique = {
   width:"100%",
-  height:"100%",
+  height:"80%",
   // border top radius
   borderTopLeftRadius:"1em",
   borderTopRightRadius:"1em",
@@ -40,9 +40,9 @@ export default function Cards() {
       <div style={cardStyle}>
       {data.map((furniture) => (
         <div class="card" style={cardUnique} key={furniture.id}>
-          <img src={furniture.photos[0].url} class="card-img" style={imgUnique} alt="..." />
-          <div class="card-img-overlay">
-            <h5 class="card-title" style={textUnique}>{furniture.category}</h5>
+          <img src={furniture.photos[0].url} class="card-img-top" style={imgUnique} alt="..." />
+          <div class="card-img-body">
+            <h6 class="card-title" style={textUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
         </div> 

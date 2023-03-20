@@ -11,7 +11,7 @@ export default function Footer(){
         <div className="footer">
             <ul className="ul-footer">
                 <li className="li-footer">
-                    <p className="p-footer title-footer">Rue Ada Lovelace,<br></br>44000 Nantes</p>
+                    <p className="p-footer">Rue Ada Lovelace,<br></br>44000 Nantes</p>
                 </li>
                 <li className="li-footer">
                     <p className="p-footer">Du lundi au vendredi</p>
@@ -20,7 +20,7 @@ export default function Footer(){
                 </li>
                 <li className="li-footer">
                     <p className="p-footer contact-footer"><BsFillTelephoneFill/>06.00.00.00.00</p>
-                    <p className="p-footer contact-footer"><IoMail/>vintage@gmail.com</p>
+                    <p className="p-footer contact-footer"><IoMail/>funky-furnish@gmail.com</p>
                 </li>
                 <li className="li-footer sociaux">
                     <p className="p-footer"><AiFillFacebook/></p>
