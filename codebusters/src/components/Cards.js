@@ -62,8 +62,9 @@ export default function Cards() {
             <h6 class="card-title" style={titleUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
-          <a href={`/product?${furniture._id}`}>
-          <div class="go-to-description" style={search}><Searchblack/></div>
+          <a href={`/product/${furniture._id}`}>
+          <div class="go-to-description" style={search}><Searchblack/>
+          </div>
           </a>
         </div> 
 

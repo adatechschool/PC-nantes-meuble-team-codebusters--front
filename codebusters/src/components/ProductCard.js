@@ -1,10 +1,10 @@
-import { ApiSingle } from "../data/ApiSingle.js";
+import { ApiUnique } from "../data/Api.js";
+import { useParams } from 'react-router-dom';
 
 const cardStyle = {
   display: "flex",
   flexWrap: "wrap",
   width: "90%",
-  // center middle of the page
   margin: "auto",
   justifyContent: "center",
 };
@@ -19,7 +19,6 @@ const cardUnique = {
 const imgUnique = {
   width: "100%",
   height: "100%",
-  // border top radius
   borderTopLeftRadius: "1em",
   borderTopRightRadius: "1em",
 };
@@ -31,7 +30,6 @@ const textUnique = {
   padding: "30px",
   border: "1px solid black",
   boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
-  padding: "10px",
   borderRadius: "1em",
 };
 
@@ -40,11 +38,17 @@ const titleUnique = {
 };
 
 export default function Cards() {
-  const data = ApiSingle();
-  console.log("ProductCard.js")
-  console.log(data);
+  const { id } = useParams();
+  const furniture = ApiUnique(id);
   return (
-    <div class="ProductCard" style={{ display: "flex", alignItems: "center" }}>
+    <div style={cardStyle}>
+      {furniture && furniture._id && (
+        <div className="card" style={cardUnique} key={furniture._id}>
+          <img src={furniture.photos[0].url} className="card-img-top" style={imgUnique} alt="..." />
+        </div>
+      )}
     </div>
   );
+  
 }
+
