@@ -1,4 +1,5 @@
 import {Api} from '../data/Api.js'
+import Searchblack from './buttons/Searchblack';
 
 const cardStyle = {
   display:"flex",
@@ -33,6 +34,16 @@ const imgUnique = {
   borderTopRightRadius:"1em",
 }
 
+const cardImgBody = {
+ display: "flex",
+ flexDirection: "row",
+ justifyContent: "space-around"
+}
+
+const search = {
+  alignSelf: "center"
+}
+
 export default function Cards() {
   const data = Api();
   //console.log(data);
@@ -41,11 +52,14 @@ export default function Cards() {
       {data.map((furniture) => (
         <div class="card" style={cardUnique} key={furniture.id}>
           <img src={furniture.photos[0].url} class="card-img-top" style={imgUnique} alt="..." />
-          <div class="card-img-body">
+          <div class="card-img-body"style={cardImgBody}>
             <h6 class="card-title" style={textUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
+          <div class="go-to-description" style={search} href= ""><Searchblack/></div>
+
         </div> 
+
       ))}
       </div>
     );
