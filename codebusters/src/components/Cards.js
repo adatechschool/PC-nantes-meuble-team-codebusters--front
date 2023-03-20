@@ -1,4 +1,5 @@
 import {Api} from '../data/Api.js'
+import Searchwhite from './buttons/Searchwhite';
 
 const cardStyle = {
   display:"flex",
@@ -33,6 +34,11 @@ const imgUnique = {
   borderTopRightRadius:"1em",
 }
 
+const test ={
+  display: "flex",
+  alignItem : "center",
+}
+
 export default function Cards() {
   const data = Api();
   //console.log(data);
@@ -44,6 +50,7 @@ export default function Cards() {
           <div class="card-img-overlay">
             <h5 class="card-title" style={textUnique}>{furniture.category}</h5>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
+              <div class="go-to-description" style={test} href= ""><Searchwhite/></div>
           </div>
         </div> 
       ))}
