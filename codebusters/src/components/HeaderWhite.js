@@ -1,5 +1,5 @@
 import ImageAccueil from "./ImageAccueil";
-import Navbarwhite from "./Navbarwhite";
+import Navbarblack from "./TestComponents/Navbarblack";
 
 const textStyle = {
   color: "white",
@@ -24,7 +24,7 @@ function Headerwhite() {
     <header>
       <div>
         <div>
-          <Navbarwhite />
+          <Navbarblack />
           <div style={divStyle}>
             <h1 style={textStyle}>FUNKY FURNISH</h1>
           </div>
