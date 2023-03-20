@@ -1,5 +1,5 @@
 import ImageAccueil from "./ImageAccueil";
-import Navbarblack from "./TestComponents/Navbarblack";
+import Navbarblack from "./Navbarblack";
 import "../assets/fonts/Vintage.ttf";
 
 const textStyle = {

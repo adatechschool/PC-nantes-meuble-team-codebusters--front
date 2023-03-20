@@ -1,8 +1,8 @@
-import Panierblack from '../buttons/Panierblack';
-import Searchblack from '../buttons/Searchblack';
-import Menublack from '../buttons/Menublack';
-import IconFavoriteblack from '../buttons/IconFavoriteblack';
-import UserButtonBlack from '../buttons/UserButtonBlack'
+import Panierblack from './buttons/Panierblack';
+import Searchblack from './buttons/Searchblack';
+import Menublack from './buttons/Menublack';
+import IconFavoriteblack from './buttons/IconFavoriteblack';
+import UserButtonBlack from './buttons/UserButtonBlack'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -35,7 +35,7 @@ function Navbarblack () {
         <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
         <Navbar.Brand href=""><Panierblack/></Navbar.Brand>
         <Navbar.Brand href=""><IconFavoriteblack/></Navbar.Brand>
-        <Navbar.Brand href=""><UserButtonBlack/></Navbar.Brand>
+        <Navbar.Brand href="/login"><UserButtonBlack/></Navbar.Brand>
         </Container>
         </Container>
     </Navbar>

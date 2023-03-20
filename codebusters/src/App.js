@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Footer from './components/footer/Footer';
-import Cards from './components/Cards'
-import Headerwhite from './components/HeaderWhite';
+// import Cards from './components/Cards'
+// import Headerwhite from './components/HeaderWhite';
 
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
