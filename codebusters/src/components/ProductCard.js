@@ -1,4 +1,4 @@
-import { Api } from "../data/Api.js";
+import { ApiSingle } from "../data/ApiSingle.js";
 
 const cardStyle = {
   display: "flex",
@@ -31,53 +31,20 @@ const textUnique = {
   padding: "30px",
   border: "1px solid black",
   boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
-  padding:"10px",
-  borderRadius:"1em", 
+  padding: "10px",
+  borderRadius: "1em",
 };
 
 const titleUnique = {
-    border:"1px solid black; padding: 5px;"
-}
+  border: "1px solid black; padding: 5px;",
+};
 
 export default function Cards() {
-  const data = Api();
-  //console.log(data);
-  const picturefurniture = data.map((furniture) => (
-    <div class="card" style={cardUnique} key={furniture.id}>
-      <img
-        src={furniture.photos[0].url}
-        class="card-img"
-        style={imgUnique}
-        alt="..."
-      />
-    </div>
-  ));
-  const titlefurniture = data.map((furniture) => (
-    <div>
-      <h2 class="card-title" style={titleUnique}>
-        {furniture.type}
-      </h2>
-    </div>
-  ));
-  const textfurniture = data.map((furniture) => (
-    <div>
-      <h5 class="card-text" style={textUnique}>
-        {furniture.description[0].text}
-      </h5>
-    </div>
-  ));
+  const data = ApiSingle();
+  console.log("ProductCard.js")
+  console.log(data);
   return (
     <div class="ProductCard" style={{ display: "flex", alignItems: "center" }}>
-      <div style={cardStyle}>{picturefurniture[0]}</div>
-      <div style={titleUnique}>
-        {titlefurniture[0]}
-        <br></br>
-        <br></br>
-        <br></br>
-        <div>
-        {textfurniture[0]}
-        </div>
-      </div>
     </div>
   );
 }
