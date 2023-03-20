@@ -7,6 +7,7 @@ import Headerwhite from './components/HeaderWhite';
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import ProductForm from './pages/ProductForm';
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/product" element={<ProductForm />} />
         </Routes>
         <Footer />
     </div>
