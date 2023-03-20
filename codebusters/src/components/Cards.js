@@ -1,10 +1,10 @@
 import {Api} from '../data/Api.js'
+import Searchblack from './buttons/Searchblack';
 
 const cardStyle = {
   display:"flex",
   flexWrap:"wrap",
   width:"90%",
-  // center middle of the page
   margin:"auto",
   justifyContent:"center",
   
@@ -17,20 +17,38 @@ const cardUnique={
   borderRadius:"1em",
 }
 
-const textUnique = {
+const titleUnique = {
   textTransform:"uppercase",
-  color:"white",
-  textShadow:"0 0 0.2em #000000",
+  color:"black",
   textAlign:"center",
   padding:"0",
+  paddingTop:"0.5em",
+}
+
+const textUnique = {
+  textTransform:"uppercase",
+  color:"black",
+  textAlign:"center",
+  padding:"0",
+  paddingTop:"0.4em",
 }
 
 const imgUnique = {
   width:"100%",
-  height:"100%",
+  height:"80%",
   // border top radius
   borderTopLeftRadius:"1em",
   borderTopRightRadius:"1em",
+}
+
+const cardImgBody = {
+ display: "flex",
+ flexDirection: "row",
+ justifyContent: "space-around"
+}
+
+const search = {
+  alignSelf: "center"
 }
 
 export default function Cards() {
@@ -40,12 +58,14 @@ export default function Cards() {
       <div style={cardStyle}>
       {data.map((furniture) => (
         <div class="card" style={cardUnique} key={furniture.id}>
-          <img src={furniture.photos[0].url} class="card-img" style={imgUnique} alt="..." />
-          <div class="card-img-overlay">
-            <h5 class="card-title" style={textUnique}>{furniture.category}</h5>
+          <img src={furniture.photos[0].url} class="card-img-top" style={imgUnique} alt="..." />
+          <div class="card-img-body"style={cardImgBody}>
+            <h6 class="card-title" style={titleUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
+          <div class="go-to-description" style={search} href= ""><Searchblack/></div>
         </div> 
+
       ))}
       </div>
     );
