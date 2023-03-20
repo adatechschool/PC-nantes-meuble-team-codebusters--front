@@ -1,11 +1,14 @@
 import ImageAccueil from "./ImageAccueil";
 import Navbarblack from "./TestComponents/Navbarblack";
+import "../assets/fonts/Vintage.ttf";
 
 const textStyle = {
   color: "white",
   textTransform: "uppercase",
-  fontSize: "5em",
-}
+  fontFamily: "Vintage",
+  fontSize: "7em",
+  textShadow: "1px 1px 1px black",
+};
 
 const divStyle = {
   position: "absolute",
