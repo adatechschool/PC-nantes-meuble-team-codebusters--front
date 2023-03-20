@@ -1,5 +1,5 @@
 import {Api} from '../data/Api.js'
-import Searchwhite from './buttons/Searchwhite';
+import Searchblack from './buttons/Searchblack';
 
 const cardStyle = {
   display:"flex",
@@ -34,9 +34,14 @@ const imgUnique = {
   borderTopRightRadius:"1em",
 }
 
-const test ={
-  display: "flex",
-  alignItem : "center",
+const cardImgBody = {
+ display: "flex",
+ flexDirection: "row",
+ justifyContent: "space-around"
+}
+
+const search = {
+  alignSelf: "center"
 }
 
 export default function Cards() {
@@ -47,12 +52,14 @@ export default function Cards() {
       {data.map((furniture) => (
         <div class="card" style={cardUnique} key={furniture.id}>
           <img src={furniture.photos[0].url} class="card-img-top" style={imgUnique} alt="..." />
-          <div class="card-img-body">
+          <div class="card-img-body"style={cardImgBody}>
             <h6 class="card-title" style={textUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
-              <div class="go-to-description" style={test} href= ""><Searchwhite/></div>
           </div>
+          <div class="go-to-description" style={search} href= ""><Searchblack/></div>
+
         </div> 
+
       ))}
       </div>
     );
