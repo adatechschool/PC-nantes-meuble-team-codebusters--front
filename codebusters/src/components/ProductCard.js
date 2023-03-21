@@ -1,7 +1,7 @@
 import { ApiUnique } from "../data/Api.js";
 import Carousel from "react-bootstrap/Carousel";
 import { useParams } from "react-router-dom";
-import PanierWhite from './buttons/Panierwhite';
+import PanierWhite from "./buttons/Panierwhite";
 
 const cardStyle = {
   display: "flex",
@@ -12,17 +12,14 @@ const cardStyle = {
 };
 
 const cardUnique = {
-  width: "70vh",
-  height: "35rem",
   marginTop: "10rem",
-  borderRadius: "1em", 
-  marginBottom:"-2rem",
+  borderRadius: "1em",
 };
 
 const imgUnique = {
-    width: "100%",
-    height: "100%",
-    borderRadius: "1em", 
+  height: "50vh",
+  borderRadius: "1em",
+  objectFit: "contain",
 };
 
 const textUnique = {
@@ -33,14 +30,13 @@ const textUnique = {
 };
 
 const subText = {
-    color: "black",
-    textAlign: "center",
+  color: "black",
+  textAlign: "center",
 };
 
-const panierWhite ={
-    display : "none",
+const panierWhite = {
+  display: "none",
 };
-
 
 export default function Cards() {
   const { id } = useParams();
@@ -54,12 +50,20 @@ export default function Cards() {
         >
           <div class="card" style={cardUnique}>
             <Carousel>
-            <Carousel.Item>
-            <img src={furniture.photos[0].url}  style={imgUnique} alt="..."></img>
-            </Carousel.Item>
-            <Carousel.Item>
-            <img src={furniture.photos[1].url}  style={imgUnique} alt="..."></img>
-            </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  src={furniture.photos[0].url}
+                  style={imgUnique}
+                  alt="..."
+                ></img>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  src={furniture.photos[1].url}
+                  style={imgUnique}
+                  alt="..."
+                ></img>
+              </Carousel.Item>
             </Carousel>
           </div>
           <div class="title">
@@ -73,10 +77,12 @@ export default function Cards() {
             <div class="text" style={subText}>
               <p>{furniture.description[0].dimensions}</p>
             </div>
-          <div class="price" style={{borderTop:"1px solid black"}}>
-                <h1>{furniture.price}€</h1>
-          </div>
-          <div><PanierWhite style={panierWhite}/></div>
+            <div class="price" style={{ borderTop: "1px solid black"}}>
+              <h1>{furniture.price}€</h1>
+            </div>
+            <div>
+              <PanierWhite style={panierWhite} />
+            </div>
           </div>
         </div>
       )}

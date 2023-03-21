@@ -15,9 +15,10 @@ function bagButton () {
         textTransform: "uppercase",
         borderRadius:"1em",
         background:"lightsalmon",
-        margin: "1rem",
-        paddingRight:"5em",
-        paddingLeft:"4em"
+        marginTop: "3rem",
+        paddingRight:"5vh",
+        paddingLeft:"4vh",
+        // marginBottom:"10rem",
     }
 
     return (
