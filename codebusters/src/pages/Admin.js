@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbarblack from "../components/TestComponents/Navbarblack";
 import { ApiAllAdmin } from '../data/Api';
+import React, { useEffect, useState } from "react";
 
 const imgSize = {
     width: "10rem",
@@ -15,9 +16,47 @@ const backGround = {
 };
 
 export default function Admin() {
+    // UPDATE AVAILABILITY
     const ApiUpdateFurniture = (id, availability) => {
         console.log(id, availability)
-      };
+        fetch("http://localhost:4000/users/furnitures/" + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(availability),
+        })
+            .then((response) => response.json())
+            .then((data) => window.location.reload(true));
+    };
+
+    // DELETE FURNITURE
+    const ApiDeleteFurniture = (id) => {
+        console.log(id)
+        fetch("http://localhost:4000/users/furnitures/" + id, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => window.location.reload(true));
+    };
+
+    // UPDATE INFORMTION OF FURNITURE
+    const ApiUpdateInformationFurniture = (id, furniture) => {
+        console.log(id, furniture)
+        fetch("http://localhost:4000/users/furnitures/" + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(furniture),
+        })
+            .then((response) => response.json())
+            .then((data) => window.location.reload(true));
+    };
+
     const data = ApiAllAdmin(); 
     console.log(data)
     return (
@@ -58,7 +97,7 @@ export default function Admin() {
                                             )}
                                 </td>
                                 <td>
-                                    <button type="button" className="btn btn-danger">Delete</button>
+                                    <button type="button" className="btn btn-danger" onClick={() => ApiDeleteFurniture(furniture._id)}>Delete</button>
                                     <button type="button" className="btn btn-warning">Modify</button>
                                 </td>
                             </tr>
