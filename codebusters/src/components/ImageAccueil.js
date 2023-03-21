@@ -20,24 +20,24 @@ const divStyle = {
   alignItems: "center",
 };
 
-const carousel = {
-  marginBottom: "15em",
-};
+// const carousel = {
+//   marginBottom: "15em",
+// };
 
 function ImageAcceuil() {
   return (
     <Carousel>
       <Carousel.Item>
         <img className="d-block w-100" src={image1} alt="First slide" />
-        <Carousel.Caption style={carousel}></Carousel.Caption>
+        {/* <Carousel.Caption style={carousel}></Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={image2} alt="Second slide" />
-        <Carousel.Caption style={carousel}></Carousel.Caption>
+        {/* <Carousel.Caption style={carousel}></Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={image3} alt="Third slide" />
-        <Carousel.Caption style={carousel}></Carousel.Caption>
+        {/* <Carousel.Caption style={carousel}></Carousel.Caption> */}
       </Carousel.Item>
     </Carousel>
   );
