@@ -1,56 +1,87 @@
 import "bootstrap/dist/css/bootstrap.css";
-import { useEffect, useState } from "react";
 import Navbarblack from "../components/TestComponents/Navbarblack";
-import {
-  callLogin,
-  createFurniture,
-  findUserFurnitures,
-} from "../data/ApiController";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import "../App.css"
+
+const formStyle = {
+  display: "flex",
+  width: "20em",
+  margin: "auto",
+  flexDirection:"column"
+};
+const title ={
+ fontSize:"1.5em",
+ marginBottom:"1em",
+ textAlign: "center"
+}
+
+const wrapperForm = {
+  display: "Flex",
+  justifyContent : "space-evenly",
+  paddingTop: "10em",
+  marginBottom: "4em",
+  textAlign: "left"
+};
+
+const buttonStyle = {
+   border: "rgba(154, 113, 85, 0.2)",
+  backgroundColor: "rgba(175, 128, 96, 0.928)",
+  alignSelf: "center"
+}
 
 export default function Login() {
-  // const [userFurniture, setUserFurniture] = useState([]);
-
-  // useEffect(() => {
-  //   findUserFurnitures().then((res) => {
-  //     setUserFurniture(res);
-  //   });
-  // }, []);
-
-  async function login() {
-    const response = await callLogin("emilie@gmail.com", "1234567");
-    console.log(response);
-  }
-
-  async function getUserFurnitures() {
-    const response = await findUserFurnitures();
-    console.log(response);
-    //setUserFurniture(response);
-  }
-
-  async function onCreateFurniture() {
-    const response = await createFurniture(
-      new Date(),
-      "assise",
-      "pouf",
-      120,
-      [
-        {
-          url: "https://prodimages.casashops-devcdn.com/productimages/ambiant/664965/DiSbVEWy4hZ83eiHJuHT30.jpg?quality=75&width=667&fit=contain",
-          view: "front",
-        },
-      ],
-      "ceci est un pouf encore",
-      true
-    );
-    console.log(response);
-  }
   return (
-    <div className="App" style={{ backgroundColor: "#FBF4F4" }}>
+    <div style={{ backgroundColor: "#FBF4F4" }}>
       <Navbarblack />
-      <h1>LOGIN PAGE</h1>
-      <button onClick={login}>click</button>
-      <button onClick={getUserFurnitures}>click</button>
-      <button onClick={onCreateFurniture}>click</button>
+      <div style={wrapperForm}>
+        <div className="loginForm" >
+          <Form style={formStyle}>
+            <h1 style={title}>Connectez-vous</h1>
+            <Form.Group className="mb-2" controlId="formBasicEmail">
+              <Form.Label>Adresse email</Form.Label>
+              <Form.Control type="email" placeholder="Email" />
+              <Form.Text className="text-muted">
+                Nous ne partagerons jamais votre adresse email.
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Mot de passe</Form.Label>
+              <Form.Control type="password" placeholder="Mot de passe" />
+            </Form.Group>
+            
+            <Button style={buttonStyle} variant="primary" type="submit">
+              Envoyez
+            </Button>
+          </Form>
+        </div>
+        <div className="registrationForm" >
+          <Form style={formStyle}>
+            <h1 style={title}>Enregistrez-vous</h1>
+            <Form.Group className="mb-2" controlId="formBasicName">
+              <Form.Label>Nom</Form.Label>
+              <Form.Control type="name" placeholder="Nom" />
+            </Form.Group>
+            <Form.Group className="mb-2" controlId="formBasicEmail">
+              <Form.Label>Adresse email</Form.Label>
+              <Form.Control type="email" placeholder="Email" />
+              <Form.Text className="text-muted">
+                Nous ne partagerons jamais votre adresse email.
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Mot de passe</Form.Label>
+              <Form.Control type="password" placeholder="Mot de passe" />
+            </Form.Group>
+  
+            <Button style={buttonStyle} variant="primary" type="submit">
+              Envoyez
+            </Button>
+          </Form>
+        </div>
+      </div>
     </div>
   );
 }

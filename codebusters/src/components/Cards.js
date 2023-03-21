@@ -11,6 +11,7 @@ const cardStyle = {
 }
 
 const cardUnique={
+  display: "flex",
   width:"20rem",
   height:"28rem",
   margin:"1em",
@@ -63,7 +64,8 @@ export default function Cards() {
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
           <a href={`/product/${furniture._id}`}>
-          <div class="go-to-description" style={search}><Searchblack/>
+          <div class="go-to-description" style={search}>
+            <Searchblack/>
           </div>
           </a>
         </div> 

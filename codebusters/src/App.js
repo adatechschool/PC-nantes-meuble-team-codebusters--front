@@ -1,4 +1,3 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Footer from './components/footer/Footer';
 import Cards from './components/Cards'
