@@ -51,7 +51,7 @@ export default function Cards() {
       let cardArray = JSON.parse(card);
       // REGARDE SI L'ID EST DEJA DANS LE TABLEAU
       if (cardArray.includes(id)) {
-        console.log("already in the card");
+        return alert("Ce produit est déjà dans votre panier");
       } else {
         cardArray.push(id);
         localStorage.setItem("card", JSON.stringify(cardArray));
