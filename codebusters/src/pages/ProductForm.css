@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.title {
+  margin-left: 10rem;
+  height: 20rem;
+}
+
+.price {
+  font-family: "Playfair Display", serif;
+  color:lightsalmon;
+  padding-top: 1rem;
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+  }
+
+.text{
+    width: 100vh;
+    font-size: 1.3rem;
+    font-family: 'Lora', serif;
+}
