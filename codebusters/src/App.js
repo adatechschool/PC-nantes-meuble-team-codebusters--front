@@ -16,7 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product" element={<ProductForm />} />
+          <Route path="/product/:id" element={<ProductForm />} />
         </Routes>
         <Footer />
     </div>

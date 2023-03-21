@@ -53,17 +53,19 @@ const search = {
 
 export default function Cards() {
   const data = Api();
-  //console.log(data);
     return(
       <div style={cardStyle}>
       {data.map((furniture) => (
-        <div class="card" style={cardUnique} key={furniture.id}>
+        <div class="card" style={cardUnique} key={furniture._id}>
           <img src={furniture.photos[0].url} class="card-img-top" style={imgUnique} alt="..." />
           <div class="card-img-body"style={cardImgBody}>
             <h6 class="card-title" style={titleUnique}>{furniture.type}</h6>
             <p class="card-text" style={textUnique}>{furniture.price}€</p>
           </div>
-          <div class="go-to-description" style={search} href= ""><Searchblack/></div>
+          <a href={`/product/${furniture._id}`}>
+          <div class="go-to-description" style={search}><Searchblack/>
+          </div>
+          </a>
         </div> 
 
       ))}
