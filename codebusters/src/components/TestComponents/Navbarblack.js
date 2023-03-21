@@ -12,6 +12,7 @@ const styleNavbar = {
   zIndex: 10,
   width: "100%",
   opacity : 0.7,
+  top: 0
 };
 
 const containerRight = {

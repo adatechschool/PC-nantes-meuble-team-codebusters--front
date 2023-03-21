@@ -8,6 +8,8 @@ const textStyle = {
   fontFamily: "Vintage",
   fontSize: "7em",
   textShadow: "1px 1px 1px black",
+  top: "calc(30% + 4em)"
+
 };
 
 const divStyle = {
