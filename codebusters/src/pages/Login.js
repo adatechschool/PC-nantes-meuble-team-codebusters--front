@@ -36,9 +36,13 @@ const buttonStyle = {
 export default function Login() {
 
   async function login() {
-    const response = await callLogin("emilie@gmail.com", "1234567");
+    //const response = await callLogin(inputLoginEmail,inputLoginPassword);
+    const response = await callLogin("emilie@gmail.com","1234567")
     console.log(response);
   }
+
+  // const inputLoginEmail = document.getElementById("inputLoginEmail").value
+  // const inputLoginPassword = document.getElementById("inputLoginPassword").value
 
   return (
     <div style={{ backgroundColor: "#FBF4F4" }}>
@@ -47,10 +51,11 @@ export default function Login() {
         <div className="loginForm" >
           <Form style={formStyle}>
             <h1 style={title}>Connectez-vous</h1>
-            <button onClick={login}>click</button>
             <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Adresse email</Form.Label>
-              <Form.Control type="email" placeholder="Email" />
+
+              <Form.Control type="email" placeholder="Email" id="inputLoginEmail" />
+
               <Form.Text className="text-muted">
                 Nous ne partagerons jamais votre adresse email. 
               </Form.Text>
@@ -58,10 +63,12 @@ export default function Login() {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" placeholder="Mot de passe" />
+
+              <Form.Control type="password" placeholder="Mot de passe" id="inputLoginPassword" />
+
             </Form.Group>
             
-            <Button style={buttonStyle} variant="primary" type="submit">
+            <Button onClick={login} style={buttonStyle} variant="primary" type="submit">
               Envoyez
             </Button>
           </Form>
