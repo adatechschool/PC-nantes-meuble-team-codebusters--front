@@ -6,7 +6,7 @@ function bagButton () {
 
     const colorBasket = {
         color: 'black',
-        width: '23px',
+        width: '31px',
         height: '30px',
     };
 

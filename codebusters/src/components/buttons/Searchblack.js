@@ -5,7 +5,7 @@ function searchButton () {
 
     const colorSearch = {
         color: 'black',
-        width: '23px',
+        width: '31px',
         height: '30px',
     }
 
