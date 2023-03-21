@@ -30,12 +30,12 @@ function Navbarblack () {
     return (
       <Navbar bg="white" variant="white" style={styleNavbar}>
       <Container style={{marginRight: "8em"}}>
-        <Navbar.Brand href="#home"><Menublack/></Navbar.Brand>
+        <Navbar.Brand href="/"><Menublack/></Navbar.Brand>
         <Container style={containerRight}>
         <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
         <Navbar.Brand href=""><Panierblack/></Navbar.Brand>
         <Navbar.Brand href=""><IconFavoriteblack/></Navbar.Brand>
-        <Navbar.Brand href=""><UserButtonBlack/></Navbar.Brand>
+        <Navbar.Brand href="/login"><UserButtonBlack/></Navbar.Brand>
         </Container>
         </Container>
     </Navbar>

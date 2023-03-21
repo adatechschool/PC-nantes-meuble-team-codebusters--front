@@ -1,10 +1,10 @@
-import { Api } from "../data/Api.js";
+import { ApiUnique } from "../data/Api.js";
+import { useParams } from 'react-router-dom';
 
 const cardStyle = {
   display: "flex",
   flexWrap: "wrap",
   width: "90%",
-  // center middle of the page
   margin: "auto",
   justifyContent: "center",
 };
@@ -19,7 +19,6 @@ const cardUnique = {
 const imgUnique = {
   width: "100%",
   height: "100%",
-  // border top radius
   borderTopLeftRadius: "1em",
   borderTopRightRadius: "1em",
 };
@@ -28,53 +27,28 @@ const textUnique = {
   textTransform: "uppercase",
   color: "black",
   textAlign: "center",
-  padding: "0",
-  
+  padding: "30px",
+  border: "1px solid black",
+  boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
+  borderRadius: "1em",
 };
 
 const titleUnique = {
-    border:"1px solid black; padding: 5px;"
-}
+  border: "1px solid black; padding: 5px;",
+};
 
 export default function Cards() {
-  const data = Api();
-  //console.log(data);
-  const picturefurniture = data.map((furniture) => (
-    <div class="card" style={cardUnique} key={furniture.id}>
-      <img
-        src={furniture.photos[0].url}
-        class="card-img"
-        style={imgUnique}
-        alt="..."
-      />
-    </div>
-  ));
-  const titlefurniture = data.map((furniture) => (
-    <div>
-      <h2 class="card-title" style={titleUnique}>
-        {furniture.type}
-      </h2>
-    </div>
-  ));
-  const textfurniture = data.map((furniture) => (
-    <div>
-      <h5 class="card-text" style={textUnique}>
-        {furniture.description[0].text}
-      </h5>
-    </div>
-  ));
+  const { id } = useParams();
+  const furniture = ApiUnique(id);
   return (
-    <div class="ProductCard" style={{ display: "flex", alignItems: "center" }}>
-      <div style={cardStyle}>{picturefurniture[0]}</div>
-      <div style={titleUnique}>
-        {titlefurniture[0]}
-        <br></br>
-        <br></br>
-        <br></br>
-        <div style={textUnique}>
-        {textfurniture[0]}
+    <div style={cardStyle}>
+      {furniture && furniture._id && (
+        <div className="card" style={cardUnique} key={furniture._id}>
+          <img src={furniture.photos[0].url} className="card-img-top" style={imgUnique} alt="..." />
         </div>
-      </div>
+      )}
     </div>
   );
+  
 }
+
