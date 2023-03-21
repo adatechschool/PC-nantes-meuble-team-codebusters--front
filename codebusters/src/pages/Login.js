@@ -40,7 +40,7 @@ export default function Login() {
             <h1 style={title}>Connectez-vous</h1>
             <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Adresse email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" placeholder="Email" />
               <Form.Text className="text-muted">
                 Nous ne partagerons jamais votre adresse email.
               </Form.Text>
@@ -48,7 +48,7 @@ export default function Login() {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Mot de passe" />
             </Form.Group>
             
             <Button style={buttonStyle} variant="primary" type="submit">
@@ -61,11 +61,11 @@ export default function Login() {
             <h1 style={title}>Enregistrez-vous</h1>
             <Form.Group className="mb-2" controlId="formBasicName">
               <Form.Label>Nom</Form.Label>
-              <Form.Control type="name" placeholder="Enter name" />
+              <Form.Control type="name" placeholder="Nom" />
             </Form.Group>
             <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Adresse email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" placeholder="Email" />
               <Form.Text className="text-muted">
                 Nous ne partagerons jamais votre adresse email.
               </Form.Text>
@@ -73,11 +73,11 @@ export default function Login() {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Mot de passe" />
             </Form.Group>
   
             <Button style={buttonStyle} variant="primary" type="submit">
-              Submit
+              Envoyez
             </Button>
           </Form>
         </div>
