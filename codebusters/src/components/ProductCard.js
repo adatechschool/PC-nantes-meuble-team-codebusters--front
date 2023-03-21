@@ -27,11 +27,13 @@ const textUnique = {
   textAlign: "center",
   padding: "30px",
   borderTop: "1px solid black",
+  letterSpacing: "1.3px",
 };
 
 const subText = {
   color: "black",
   textAlign: "center",
+  letterSpacing: "1.3px",
 };
 
 const panierWhite = {
