@@ -2,6 +2,7 @@ import { ApiUnique } from "../data/Api.js";
 import Carousel from "react-bootstrap/Carousel";
 import { useParams } from "react-router-dom";
 import PanierWhite from "./buttons/Panierwhite";
+import React, { useEffect, useState } from "react";
 
 const cardStyle = {
   display: "flex",
@@ -44,6 +45,29 @@ const panierWhite = {
 };
 
 export default function Cards() {
+  // AJOUTER UN ELEMENT AU LOCAL STORAGE
+  const addToCard = (id) => {
+    console.log(id);
+    let card = localStorage.getItem("card");
+    // REGARDE SI LE TABLEAU EXISTE
+    if (card) {
+      let cardArray = JSON.parse(card);
+      // REGARDE SI L'ID EST DEJA DANS LE TABLEAU
+      if (cardArray.includes(id)) {
+        return alert("Ce produit est déjà dans votre panier");
+      } else {
+        cardArray.push(id);
+        localStorage.setItem("card", JSON.stringify(cardArray));
+        window.location.href = "/cart";
+      }
+      // SI LE TABLEAU N'EXISTE PAS
+    } else {
+      let cardArray = [];
+      localStorage.setItem("card", JSON.stringify(cardArray));
+      window.location.href = "/cart";
+    }
+  };
+
   const { id } = useParams();
   const furniture = ApiUnique(id);
   return (
@@ -82,10 +106,17 @@ export default function Cards() {
             <div class="text" style={subText}>
               <p>{furniture.description[0].dimensions}</p>
             </div>
-            <div class="price">
+            <div class="price" style={{ borderTop: "1px solid black" }}>
               <h1>{furniture.price}€</h1>
             </div>
             <div>
+              <button
+                onClick={() => addToCard(furniture._id)}
+                type="button"
+                class="btn btn-primary"
+              >
+                Add to card (Waitin button)
+              </button>
               <PanierWhite style={panierWhite} />
             </div>
           </div>

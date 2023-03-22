@@ -45,7 +45,7 @@ function Navbarblack () {
         <Navbar.Brand href="/"><Menublack/></Navbar.Brand>
         <Container style={containerRight}>
         <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
-        <Navbar.Brand href=""><Panierblack/></Navbar.Brand>
+        <Navbar.Brand href="/cart"><Panierblack/></Navbar.Brand>
         <Navbar.Brand href=""><IconFavoriteblack/></Navbar.Brand>
         <Navbar.Brand href="/login"><UserButtonBlack/></Navbar.Brand>
         </Container>
