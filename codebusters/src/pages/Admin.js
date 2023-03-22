@@ -67,6 +67,36 @@ export default function Admin() {
             <div className="row" >
                 <div className="col-12" style={backGround}>
                     <h1>Admin Page</h1>
+                    {/* LIGNE POUR RENTRER UN ID ET MODIFIER LE MEUBLE */}
+                    <div className="row">
+                        <div className="col-12">
+                            <form>
+                                <div className="form-group">
+                                    <label htmlFor="idFurniture">ID Furniture</label>
+                                    <input type="text" className="form-control" id="idFurniture" placeholder="Enter ID Furniture" />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="category">Category</label>
+                                    <input type="text" className="form-control" id="category" placeholder="Enter Category" />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="type">Type</label>
+                                    <input type="text" className="form-control" id="type" placeholder="Enter Type" />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="description">Description</label>
+                                    <input type="text" className="form-control" id="description" placeholder="Enter Description" />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="price">Price</label>
+                                    <input type="text" className="form-control" id="price" placeholder="Enter Price" />
+                                </div>
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                                {/* button for find furniture in id and preremplie */}
+
+                            </form>
+                        </div>
+                    </div>
                     <table className="table">
                         <thead>
                             <tr>
@@ -77,6 +107,7 @@ export default function Admin() {
                                 <th scope="col">Price</th>
                                 <th scope="col">Availability</th>
                                 <th scope="col">Delete / Modify</th>
+                                <th scope='col'>Copy ID</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,6 +130,9 @@ export default function Admin() {
                                 <td>
                                     <button type="button" className="btn btn-danger" onClick={() => ApiDeleteFurniture(furniture._id)}>Delete</button>
                                     <button type="button" className="btn btn-warning">Modify</button>
+                                </td>
+                                <td>
+                                    <button type="button" className="btn btn-warning" onClick={() => navigator.clipboard.writeText(furniture._id)}>Copy ID</button>
                                 </td>
                             </tr>
                             ))}
