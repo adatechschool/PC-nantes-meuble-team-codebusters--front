@@ -29,3 +29,13 @@ export function ApiAllAdmin(idFurniture) {
   }, [idFurniture]);
   return data;
 }
+
+export function ApiOneMeuble(idFurniture) {
+  const [data, setData] = useState({});
+  useEffect(() => {
+    fetch("http://localhost:4000/furnitures/category")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, [idFurniture]);
+  return data;
+}
