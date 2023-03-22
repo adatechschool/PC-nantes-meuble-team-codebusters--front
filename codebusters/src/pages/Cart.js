@@ -35,11 +35,11 @@ export default function Cart() {
   };
 
   // supprimer un element du local storage
+  let card = localStorage.getItem("card");
+  let cardArray = JSON.parse(card);
   const deleteLocalStorage = (id) => {
     console.log(id);
-    let card = localStorage.getItem("card");
     // remove the id from the array
-    let cardArray = JSON.parse(card);
     cardArray = cardArray.filter((furniture) => furniture !== id);
     // set the new array in the local storage
     localStorage.setItem("card", JSON.stringify(cardArray));
@@ -48,6 +48,7 @@ export default function Cart() {
   };
   const data = getAllLocalStorage();
 
+  if (data.length === cardArray.length) {
   return (
     <div className="App" style={{ backgroundColor: "#FBF4F4" }}>
       <Navbarblack />
@@ -74,4 +75,5 @@ export default function Cart() {
       </div>
     </div>
   );
+        }
 }
