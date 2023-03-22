@@ -54,7 +54,6 @@ export async function createFurniture(
   photos,
   description,
 ) {
-  console.log( category, type, price, photos, description);
   const url = buildUrl("/furnitures");
   const response = await fetch(url, {
     method: "POST",

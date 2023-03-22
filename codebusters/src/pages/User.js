@@ -11,39 +11,7 @@ const buttonStyle = {
    alignSelf: "center"
  }
 
-//  const ApipostFurniture = (id) => {
-//     console.log(id)
-//     fetch("http://localhost:4000/users/furnitures/" + id, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(),
-//     })
-//         .then((response) => response.json())
-//         .then((data) => window.location.reload(true));
-// };
-
-// const CreationOfFurniture = (id) => {
-//     const furniture = {
-//         type: document.getElementById("inputNameNewFurniture").value,
-//         category: document.getElementById("inputCategoryNewFurniture").value,
-//         photos: document.getElementById("inputImageNewFurniture").value,
-//         price: document.getElementById("inputPriceNewFurniture").value,
-//         description: [
-//             {
-//                 color: document.getElementById("inputColorNewFurniture").value,
-//                 dimensions: document.getElementById("inputDimensionNewFurniture").value,
-//                 text: document.getElementById("inputDescriptionNewFurniture").value,
-//             }
-//         ],
-//     }
-//     ApiUpdateInformationFurniture(id, furniture);
-//     alert("Furniture added");
-// }
-
  async function newFurniture(event) {
-    console.log("Avant");
     event.preventDefault();
     const response = await createFurniture(
       document.getElementById("inputCategoryNewFurniture").value,
@@ -52,7 +20,6 @@ const buttonStyle = {
       document.getElementById("inputPhotosNewFurniture").value,
       document.getElementById("inputDescriptionNewFurniture").value,
     );
-    console.log("Après");
     console.log(response);
   }
 
