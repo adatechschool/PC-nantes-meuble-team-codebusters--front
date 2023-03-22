@@ -13,6 +13,7 @@ const cardStyle = {
 };
 
 const cardUnique = {
+    display:"flex",
   marginTop: "10rem",
   borderRadius: "1em",
 };
@@ -26,12 +27,14 @@ const imgUnique = {
 const textUnique = {
   color: "black",
   textAlign: "center",
-  padding: "30px",
+  padding: "3vh",
   borderTop: "1px solid black",
   letterSpacing: "1.3px",
+  display:"flex",
 };
 
 const subText = {
+    display:"flex",
   color: "black",
   textAlign: "center",
   letterSpacing: "1.3px",

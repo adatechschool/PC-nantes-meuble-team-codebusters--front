@@ -4,8 +4,19 @@ import Menublack from '../buttons/Menublack';
 import IconFavoriteblack from '../buttons/IconFavoriteblack';
 import UserButtonBlack from '../buttons/UserButtonBlack'
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import "../../assets/fonts/Vintage.ttf";
+
+
+const textStyle = {
+  display:"flex",
+  color: "black",
+  textTransform: "uppercase",
+  fontFamily: "Vintage",
+  fontSize: "3em",
+  textShadow: "1px 1px 1px black",
+  top: "calc(30% + 4em)"
+};
 
 const styleNavbar = {
   position: "fixed",
