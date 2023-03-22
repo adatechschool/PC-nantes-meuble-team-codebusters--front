@@ -5,6 +5,7 @@ import {useState} from 'react';
 
 function BasicButtonExample() {
   const data = Api();
+  const commode = ["commode"];
   const uniqueCategory = data.reduce((accumulator, current) => {
     if (!accumulator.find((item) => item.category === current.category)) {
       accumulator.push(current);
@@ -18,7 +19,7 @@ function BasicButtonExample() {
         <DropdownButton id="dropdown-basic-button" title="Catégories">
           {uniqueCategory.map((furniture) => (
               <div class="card" key={furniture}>
-              <Dropdown.Item href="#/action-1">
+              <Dropdown.Item>
                 {furniture.category}
               </Dropdown.Item>
             </div>
