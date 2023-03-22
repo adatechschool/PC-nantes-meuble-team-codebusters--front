@@ -29,7 +29,7 @@ export function getStoredToken() {
   return cookie.get("token");
 }
 
-function buildHeaders() {
+export function buildHeaders() {
   const headers = {
     Accept: "application/json",
     "Content-Type": "application/json",
