@@ -3,7 +3,7 @@ import Navbarblack from "../components/TestComponents/Navbarblack";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../App.css";
-import { callLogin } from "../data/ApiController";
+import { callLogin, createUser } from "../data/ApiController";
 
 const formStyle = {
   display: "flex",
@@ -32,10 +32,22 @@ const buttonStyle = {
 };
 
 export default function Login() {
-
   async function login(event) {
-    event.preventDefault()
-    const response = await callLogin(document.getElementById("inputLoginEmail").value, document.getElementById("inputLoginPassword").value);
+    event.preventDefault();
+    const response = await callLogin(
+      document.getElementById("inputLoginEmail").value,
+      document.getElementById("inputLoginPassword").value
+    );
+    console.log(response);
+  }
+
+  async function newUser(event) {
+    event.preventDefault();
+    const response = await createUser(
+      document.getElementById("inputNewUserName").value,
+      document.getElementById("inputNewUserEmail").value,
+      document.getElementById("inputNewUserPassword").value
+    );
     console.log(response);
   }
 
@@ -44,10 +56,7 @@ export default function Login() {
       <Navbarblack />
       <div style={wrapperForm}>
         <div className="loginForm">
-          <Form 
-          onSubmit={login}
-          
-          style={formStyle}>
+          <Form onSubmit={login} style={formStyle}>
             <h1 style={title}>Connectez-vous</h1>
             <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Adresse email</Form.Label>
@@ -73,27 +82,29 @@ export default function Login() {
               />
             </Form.Group>
 
-            <Button
-              
-              
-              style={buttonStyle}
-              variant="primary"
-              type="submit"
-            >
+            <Button style={buttonStyle} variant="primary" type="submit">
               Envoyez
             </Button>
           </Form>
         </div>
         <div className="registrationForm">
-          <Form style={formStyle}>
+          <Form onSubmit={newUser} style={formStyle}>
             <h1 style={title}>Enregistrez-vous</h1>
             <Form.Group className="mb-2" controlId="formBasicName">
               <Form.Label>Nom</Form.Label>
-              <Form.Control type="name" placeholder="Nom" />
+              <Form.Control
+                type="name"
+                placeholder="Nom"
+                id="inputNewUserName"
+              />
             </Form.Group>
             <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Adresse email</Form.Label>
-              <Form.Control type="email" placeholder="Email" />
+              <Form.Control
+                type="email"
+                placeholder="Email"
+                id="inputNewUserEmail"
+              />
               <Form.Text className="text-muted">
                 Nous ne partagerons jamais votre adresse email.
               </Form.Text>
@@ -101,7 +112,11 @@ export default function Login() {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" placeholder="Mot de passe" />
+              <Form.Control
+                type="password"
+                placeholder="Mot de passe"
+                id="inputNewUserPassword"
+              />
             </Form.Group>
 
             <Button style={buttonStyle} variant="primary" type="submit">
