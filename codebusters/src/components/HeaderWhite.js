@@ -1,6 +1,7 @@
 import ImageAccueil from "./ImageAccueil";
 import Navbarblack from "./TestComponents/Navbarblack";
-import Logo from "../assets/Funky_Furnish.svg";
+import Logo from "../assets/Funky_Funish_blanc.svg";
+import Logo2 from "../assets/NewLogoG.png";
 import "../assets/fonts/Vintage.ttf";
 
 const textStyle = {
@@ -33,7 +34,8 @@ function Headerwhite() {
           <Navbarblack />
           <div style={divStyle}>
             <h1 style={textStyle}>FUNKY FURNISH</h1>
-            {/* <img src={Logo} style={{display:"flex", height:"40vh", opacity:"65%"}}></img> */}
+            <img src={Logo} style={{display:"flex", height:"30vh", borderRadius:"1em", opacity:"1"}}></img>
+            {/* <img src={Logo2} style={{display:"flex", height:"25vh", border:"none", opacity:"0.8"}}></img> */}
           </div>
         </div>
         <ImageAccueil />
