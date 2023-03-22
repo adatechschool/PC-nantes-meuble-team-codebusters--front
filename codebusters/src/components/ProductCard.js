@@ -12,6 +12,7 @@ const cardStyle = {
 };
 
 const cardUnique = {
+    display:"flex",
   marginTop: "10rem",
   borderRadius: "1em",
 };
@@ -25,12 +26,14 @@ const imgUnique = {
 const textUnique = {
   color: "black",
   textAlign: "center",
-  padding: "30px",
+  padding: "3vh",
   borderTop: "1px solid black",
   letterSpacing: "1.3px",
+  display:"flex",
 };
 
 const subText = {
+    display:"flex",
   color: "black",
   textAlign: "center",
   letterSpacing: "1.3px",
@@ -79,7 +82,7 @@ export default function Cards() {
             <div class="text" style={subText}>
               <p>{furniture.description[0].dimensions}</p>
             </div>
-            <div class="price" style={{ borderTop: "1px solid black"}}>
+            <div class="price">
               <h1>{furniture.price}€</h1>
             </div>
             <div>

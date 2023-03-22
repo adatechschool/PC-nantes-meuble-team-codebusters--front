@@ -1,29 +1,25 @@
-import {HiBars3} from "react-icons/hi2";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
+import { AiOutlineHome } from "react-icons/ai";
 
-
-function searchButton () {
-
-    const colorBars = {
-        color: 'black',
-        width: '32',
-        height: '30px',
-    }
-
-    const buttonStyle={
-        borderRadius:"10em",
-        border:"none",
-        display:"flex",
-        background:"none",
-    }
-
-    return (
-        <div>
-            <Button variant="outline-light" style={buttonStyle}>
-                    <HiBars3 style={colorBars}/>
-            </Button>
-        </div>
-    );
+function searchButton() {
+  return (
+    <div>
+      <Button variant="none">
+        <button style={{ backgroundColor: "white", border: "none" }}>
+          <AiOutlineHome
+            style={{
+              color: "black",
+              fontSize: "1em",
+              background: "none",
+              width: "35.14px",
+              height: "32px",
+              hover:"black", 
+            }}
+          />
+        </button>
+      </Button>
+    </div>
+  );
 }
 
 export default searchButton;
