@@ -72,3 +72,21 @@ export async function createFurniture(
   })
   return await response.json();
 }
+
+export async function createUser(
+  name,
+  email,
+  password
+  ) {
+    const url = buildUrl("/users");
+    const response = await fetch(url, {
+      method: "POST",
+      headers: buildHeaders(),
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        password: password,
+      }),
+    })
+    return await response.json();
+  }
