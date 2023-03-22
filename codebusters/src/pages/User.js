@@ -46,10 +46,10 @@ const buttonStyle = {
     console.log("Avant");
     event.preventDefault();
     const response = await createFurniture(
-      document.getElementById("inputNameNewFurniture").value,
       document.getElementById("inputCategoryNewFurniture").value,
-      document.getElementById("inputImageNewFurniture").value,
+      document.getElementById("inputTypeNewFurniture").value,
       document.getElementById("inputPriceNewFurniture").value,
+      document.getElementById("inputPhotosNewFurniture").value,
       document.getElementById("inputDescriptionNewFurniture").value,
     );
     console.log("Après");
@@ -62,19 +62,15 @@ export default function PostNewFurniture() {
       <Navbarblack />
     <div>
     <Form className='col-3' onSubmit={newFurniture}>
-      <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Nom</Form.Label>
-        <Form.Control type="text" placeholder="Entrez le nom de votre meuble" id="inputNameNewFurniture"/>
-      </Form.Group>
-
+      
       <Form.Group className="mb-3" controlId="formBasicCategory">
         <Form.Label>Catégorie</Form.Label>
         <Form.Control type="text" placeholder="Entrez le type de votre meuble" id="inputCategoryNewFurniture"/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicImage">
-        <Form.Label>Image</Form.Label>
-        <Form.Control type="text" placeholder="Entrez l'url de votre image" id="inputImageNewFurniture"/>
+        <Form.Label>Type</Form.Label>
+        <Form.Control type="text" placeholder="Entrez l'url de votre image" id="inputTypeNewFurniture"/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPrice">
@@ -83,13 +79,8 @@ export default function PostNewFurniture() {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Dimensions</Form.Label>
-        <Form.Control type="text" placeholder="Ex : Largeur 50 cm, Hauteur 80cm, Profondeur 40cm" id="inputDimensionNewFurniture"/>
-      </Form.Group>
-
-      <Form.Group className="mb-3">
-        <Form.Label>Couleur</Form.Label>
-        <Form.Control type="text" placeholder="Entrez la couleur de votre meuble" id="inputColorNewFurniture" />
+        <Form.Label>Photos</Form.Label>
+        <Form.Control type="text" placeholder="Ex : Largeur 50 cm, Hauteur 80cm, Profondeur 40cm" id="inputPhotosNewFurniture"/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicDescrption">

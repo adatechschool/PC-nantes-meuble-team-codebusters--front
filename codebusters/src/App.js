@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductForm />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/user/:id" element={<User />} />
+          <Route path="/user" element={<User />} />
         </Routes>
       </div>
         <div style={footerStyle}>
