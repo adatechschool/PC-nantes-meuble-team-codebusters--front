@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import ProductForm from './pages/ProductForm';
 import Admin from './pages/Admin';
 import Cart from './pages/Cart';
+import User from './pages/User';
 
 const footerStyle={
   marginTop:"auto",
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductForm />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/user/:id" element={<User />} />
         </Routes>
       </div>
         <div style={footerStyle}>

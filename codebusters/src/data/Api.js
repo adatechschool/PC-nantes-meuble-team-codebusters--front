@@ -29,3 +29,5 @@ export function ApiAllAdmin(idFurniture) {
   }, [idFurniture]);
   return data;
 }
+
+
