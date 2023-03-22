@@ -59,6 +59,35 @@ export default function Admin() {
 
     const data = ApiAllAdmin(); 
     console.log(data)
+    
+    const findFurniture = (id) => {
+        data.map((furniture) => {
+            if (furniture._id === id) {
+                document.getElementById("idFurniture").value = furniture._id;
+                document.getElementById("category").value = furniture.category;
+                document.getElementById("type").value = furniture.type;
+                document.getElementById("description").value = furniture.description[0].text;
+                document.getElementById("price").value = furniture.price;
+                window.scrollTo(0, 0);
+            }
+        })
+    };
+
+    const updateFurniture = (id) => {
+        const furniture = {
+            category: document.getElementById("category").value,
+            type: document.getElementById("type").value,
+            description: [
+                {
+                    text: document.getElementById("description").value,
+                }
+            ],
+            price: document.getElementById("price").value,
+        }
+        ApiUpdateInformationFurniture(id, furniture);
+        alert("Furniture updated");
+    }
+
     return (
         <div className="App">
             <Navbarblack />
@@ -91,9 +120,10 @@ export default function Admin() {
                                     <label htmlFor="price">Price</label>
                                     <input type="text" className="form-control" id="price" placeholder="Enter Price" />
                                 </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                                {/* button for find furniture in id and preremplie */}
-
+                                <div className="form-group">
+                                    <button type="button" className="btn btn-primary" onClick={() => updateFurniture(document.getElementById("idFurniture").value)}>Update Furniture</button>
+                                    <button type="button" className="btn btn-warning" onClick={() => findFurniture(document.getElementById("idFurniture").value)}>Find Furniture ID</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -129,7 +159,7 @@ export default function Admin() {
                                 </td>
                                 <td>
                                     <button type="button" className="btn btn-danger" onClick={() => ApiDeleteFurniture(furniture._id)}>Delete</button>
-                                    <button type="button" className="btn btn-warning">Modify</button>
+                                    <button type="button" className="btn btn-primary" onClick={() => findFurniture(furniture._id)}>Modify</button>
                                 </td>
                                 <td>
                                     <button type="button" className="btn btn-warning" onClick={() => navigator.clipboard.writeText(furniture._id)}>Copy ID</button>
