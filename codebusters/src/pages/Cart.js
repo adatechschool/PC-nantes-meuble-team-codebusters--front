@@ -53,7 +53,7 @@ export default function Cart() {
     <div className="App" style={{ backgroundColor: "#FBF4F4" }}>
       <Navbarblack />
       <div style={divStyle}>
-        <h1>Cart</h1>
+        <h1>Panier</h1>
         {/* REGARDE SI LE PANIER EST PLEIN */}
         {data[0] === undefined && (
             <div>
@@ -67,8 +67,8 @@ export default function Cart() {
               <div className="card-body">
                 <h5 className="card-title">{furniture.type}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">{furniture.price}€</h6>
-                <a href="" className="btn btn-primary">Buy</a>
-                <button className="btn btn-danger" onClick={() => deleteLocalStorage(furniture._id)}>Delete</button>
+                <a href="" className="btn btn-primary">Acheter</a>
+                <button className="btn btn-danger" onClick={() => deleteLocalStorage(furniture._id)}>Supprimer</button>
               </div>
             </div>
           ))}
