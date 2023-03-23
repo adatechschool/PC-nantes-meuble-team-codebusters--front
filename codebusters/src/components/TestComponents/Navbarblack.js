@@ -6,6 +6,7 @@ import UserButtonBlack from '../buttons/UserButtonBlack'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import "../../assets/fonts/Vintage.ttf";
+import Cookies from 'universal-cookie';
 
 
 const textStyle = {
@@ -39,6 +40,11 @@ const nav = {
 
 function Navbarblack () {
 
+  function deleteCookie() {
+    const cookie = new Cookies();
+    cookie.remove("token");
+  }
+
     return (
       <Navbar bg="white" variant="white" style={styleNavbar}>
       <Container style={{marginRight: "8em"}}>
@@ -46,7 +52,7 @@ function Navbarblack () {
         <Container style={containerRight}>
         <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
         <Navbar.Brand href="/cart"><Panierblack/></Navbar.Brand>
-        <Navbar.Brand href=""><IconFavoriteblack/></Navbar.Brand>
+        <Navbar.Brand onClick = {deleteCookie} href="/login"><IconFavoriteblack/></Navbar.Brand>
         <Navbar.Brand href="/login"><UserButtonBlack/></Navbar.Brand>
         </Container>
         </Container>

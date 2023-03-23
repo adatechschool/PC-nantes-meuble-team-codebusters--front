@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbarblack from "../components/TestComponents/Navbarblack";
 import { ApiAllAdmin } from '../data/Api';
+import { getStoredToken } from '../data/ApiController';
 import React, { useEffect, useState } from "react";
 
 const imgSize = {
@@ -16,6 +17,11 @@ const backGround = {
 };
 
 export default function Admin() {
+
+    if (getStoredToken() !== "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NDE5Yjc2OTUyNTRhY2RjNDYyNzJjZDQiLCJlbWFpbCI6ImxhdXJlbGluZS5mbGV1cnlAZ21haWwuY29tIn0.4pFpu9CGjQ4crv0nw8fjlxUOMYVDXi1DOGPC3i69LR8") {
+      window.location.href = "/login";
+    }
+
     // UPDATE AVAILABILITY
     const ApiUpdateFurniture = (id, availability) => {
         console.log(id, availability)

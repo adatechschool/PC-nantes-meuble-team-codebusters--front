@@ -38,7 +38,12 @@ export default function Login() {
       document.getElementById("inputLoginEmail").value,
       document.getElementById("inputLoginPassword").value
     );
-    console.log(response);
+    
+    if(response.rights.rights === true) {
+      window.location.href = "/admin";
+    } else {
+      window.location.href = "/user";
+    }
   }
 
   async function newUser(event) {
