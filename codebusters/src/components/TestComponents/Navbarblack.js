@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import "../../assets/fonts/Vintage.ttf";
 import Cookies from 'universal-cookie';
+import { getStoredToken } from '../../data/ApiController';
 
 
 const textStyle = {
@@ -45,6 +46,16 @@ function Navbarblack () {
     cookie.remove("token");
   }
 
+  function ifLoggedIn() {
+    if(getStoredToken() === undefined) {
+      window.location.href = "/login";
+    } else if (getStoredToken() === "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NDE5Yjc2OTUyNTRhY2RjNDYyNzJjZDQiLCJlbWFpbCI6ImxhdXJlbGluZS5mbGV1cnlAZ21haWwuY29tIn0.4pFpu9CGjQ4crv0nw8fjlxUOMYVDXi1DOGPC3i69LR8") {
+      window.location.href = "/admin";
+    } else {
+      window.location.href = "/user"
+    }
+  }
+
     return (
       <Navbar bg="white" variant="white" style={styleNavbar}>
       <Container style={{marginRight: "8em"}}>
@@ -53,7 +64,7 @@ function Navbarblack () {
         <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
         <Navbar.Brand href="/cart"><Panierblack/></Navbar.Brand>
         <Navbar.Brand onClick = {deleteCookie} href="/login"><IconFavoriteblack/></Navbar.Brand>
-        <Navbar.Brand href="/login"><UserButtonBlack/></Navbar.Brand>
+        <Navbar.Brand onClick={ifLoggedIn}><UserButtonBlack/></Navbar.Brand>
         </Container>
         </Container>
     </Navbar>
