@@ -1,7 +1,8 @@
-import { Api } from "../data/Api.js";
+import { Api, ApiOneCategory } from "../data/Api.js";
 import Searchblack from "./buttons/Searchblack";
 import BasicButtonExample from "../components/Filter";
 import { useParams } from "react-router-dom";
+
 
 const cardStyle = {
   display: "flex",
@@ -58,11 +59,12 @@ export default function Cards() {
   const { id } = useParams();
   console.log(id);
   if (id != undefined) {
-    const meuble = Api(id);
+    const meuble = ApiOneCategory(id);
+    console.log(meuble)
     return (
       <div style={cardStyle}>
         {meuble.map((furniture) => (
-          <div class="card" style={cardUnique} key={furniture._id}>
+          <div class="card" style={cardUnique}>
             <img
               src={furniture.photos[0].url}
               class="card-img-top"

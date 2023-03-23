@@ -30,12 +30,14 @@ export function ApiAllAdmin(idFurniture) {
   return data;
 }
 
-export function ApiOneMeuble(idFurniture) {
-  const [data, setData] = useState({});
+export function ApiOneCategory(idFurniture) {
+  console.log("ID", idFurniture)
+  const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/furnitures/category")
+    fetch("http://localhost:4000/furnitures?category=" + idFurniture)
       .then((response) => response.json())
       .then((data) => setData(data));
-  }, [idFurniture]);
+    }, []);
+    console.log("API",data)
   return data;
 }
