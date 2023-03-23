@@ -79,7 +79,7 @@ export default function Cards() {
                 {furniture.price}€
               </p>
             </div>
-            <a href={`/product/${furniture._id}`}>
+            <a >
               <div class="go-to-description" style={search}>
                 <Searchblack />
               </div>
