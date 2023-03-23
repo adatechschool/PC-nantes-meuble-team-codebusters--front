@@ -22,6 +22,7 @@ export default function App() {
       <div style={pageStyle}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home/:id" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/product/:id" element={<ProductForm />} />
           <Route path="/cart" element={<Cart />} />
