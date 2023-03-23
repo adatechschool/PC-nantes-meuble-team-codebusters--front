@@ -17,7 +17,7 @@ export default function Footer(){
                 </li>
                 <li className="li-footer"><h0><b>Ouverture :</b></h0>
                     <p className="p-footer">Du lundi au vendredi<br/>
-                                            Le matin : 9h30 à 12h30<br/>
+                                            Le matin : de 9h30 à 12h30<br/>
                                             L'après midi : de 14h à 17h30
                     </p>
                 </li>
