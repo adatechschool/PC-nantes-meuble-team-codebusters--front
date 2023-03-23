@@ -1,7 +1,6 @@
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Api } from "../data/Api.js";
-import { useState } from "react";
 
 function BasicButtonExample() {
   const data = Api();
@@ -17,7 +16,7 @@ function BasicButtonExample() {
       <div>
         <DropdownButton id="dropdown-basic-button" title="Catégories">
           {uniqueCategory.map((furniture) => (
-            <div class="card" key={furniture}>
+            <div key={furniture}>
               <Dropdown.Item href={`/home/${furniture.category}`}>{furniture.category}</Dropdown.Item>
             </div>
           ))}

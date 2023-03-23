@@ -57,10 +57,8 @@ const search = {
 export default function Cards() {
   const data = Api();
   const { id } = useParams();
-  console.log(id);
-  if (id != undefined) {
+  if (id !== undefined) {
     const meuble = ApiOneCategory(id);
-    console.log(meuble)
     return (
       <div style={cardStyle}>
         {meuble.map((furniture) => (

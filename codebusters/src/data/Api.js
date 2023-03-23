@@ -31,14 +31,12 @@ export function ApiAllAdmin(idFurniture) {
 }
 
 export function ApiOneCategory(idFurniture) {
-  console.log("ID", idFurniture)
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("http://localhost:4000/furnitures?category=" + idFurniture)
       .then((response) => response.json())
       .then((data) => setData(data));
     }, []);
-    console.log("API",data)
   return data;
 }
 
