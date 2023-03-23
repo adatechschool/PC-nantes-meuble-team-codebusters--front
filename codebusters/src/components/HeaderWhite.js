@@ -20,7 +20,6 @@ const divStyle = {
   top: "55%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  padding: "10em",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
