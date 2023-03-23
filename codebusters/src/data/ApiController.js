@@ -47,6 +47,14 @@ export async function findUserFurnitures() {
   return await response.json();
 }
 
+export async function getUserInfo() {
+  const url = buildUrl("/users/auth");
+  const response = await fetch(url, {
+    headers: buildHeaders()
+  });
+  return await response.json();
+}
+
 export async function createFurniture(
   category,
   type,
