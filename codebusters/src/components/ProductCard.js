@@ -1,8 +1,6 @@
 import { ApiUnique } from "../data/Api.js";
 import Carousel from "react-bootstrap/Carousel";
 import { useParams } from "react-router-dom";
-//import PanierWhite from "./buttons/Panierwhite";
-import React, { useEffect, useState } from "react";
 import { BsBasket2} from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
 
@@ -21,7 +19,6 @@ const buttonStyle={
     marginTop: "3rem",
     paddingRight:"5vh",
     paddingLeft:"4vh",
-    // marginBottom:"10rem",
 }
 
 const cardStyle = {
@@ -129,11 +126,9 @@ export default function Cards() {
               <h1>{furniture.price}€</h1>
             </div>
             <div>
-              
                 <Button onClick={() => addToCard(furniture._id)} variant="outline-light" style={buttonStyle}>
                   <BsBasket2 style={colorBasket}/>Ajouter au Panier
                 </Button>
-               
             </div>
           </div>
         </div>

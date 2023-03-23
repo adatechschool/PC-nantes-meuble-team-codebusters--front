@@ -18,7 +18,7 @@ const title = {
 };
 
 const wrapperForm = {
-  display: "Flex",
+  display: "flex",
   justifyContent: "space-evenly",
   paddingTop: "10em",
   marginBottom: "4em",
@@ -38,7 +38,6 @@ export default function Login() {
       document.getElementById("inputLoginEmail").value,
       document.getElementById("inputLoginPassword").value
     );
-    
     if(response.rights.rights === true) {
       window.location.href = "/admin";
     } else {

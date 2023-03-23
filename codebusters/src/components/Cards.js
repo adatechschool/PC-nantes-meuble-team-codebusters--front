@@ -1,6 +1,5 @@
 import { Api, ApiOneCategory } from "../data/Api.js";
 import Searchblack from "./buttons/Searchblack";
-import BasicButtonExample from "../components/Filter";
 import { useParams } from "react-router-dom";
 
 
@@ -39,7 +38,6 @@ const textUnique = {
 const imgUnique = {
   width: "100%",
   height: "80%",
-  // border top radius
   borderTopLeftRadius: "1em",
   borderTopRightRadius: "1em",
 };
@@ -57,6 +55,7 @@ const search = {
 export default function Cards() {
   const data = Api();
   const { id } = useParams();
+  
   if (id !== undefined) {
     const meuble = ApiOneCategory(id);
     return (

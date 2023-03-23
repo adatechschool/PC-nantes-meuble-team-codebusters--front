@@ -46,6 +46,7 @@ export default function Cart() {
     // refresh the page
     window.location.reload();
   };
+
   const data = getAllLocalStorage();
 
   if (data.length === cardArray.length) {
@@ -57,7 +58,7 @@ export default function Cart() {
         {/* REGARDE SI LE PANIER EST PLEIN */}
         {data[0] === undefined && (
             <div>
-                <h2>Your cart is empty</h2>
+                <h2>Votre panier est vide</h2>
                 </div>
         )}
         {/* SI IL EST PLEIN AFFICHER LES ARTICLES */}
@@ -75,5 +76,5 @@ export default function Cart() {
       </div>
     </div>
   );
-        }
+  }
 }

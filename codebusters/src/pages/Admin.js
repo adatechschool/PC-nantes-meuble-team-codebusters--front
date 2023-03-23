@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbarblack from "../components/TestComponents/Navbarblack";
 import { ApiAllAdmin } from '../data/Api';
 import { getStoredToken } from '../data/ApiController';
-import React, { useEffect, useState } from "react";
 
 const imgSize = {
     width: "10rem",
@@ -33,7 +32,7 @@ export default function Admin() {
             body: JSON.stringify(availability),
         })
             .then((response) => response.json())
-            .then((data) => window.location.reload(true));
+            .then(() => window.location.reload(true));
     };
 
     // DELETE FURNITURE
@@ -46,10 +45,10 @@ export default function Admin() {
             },
         })
             .then((response) => response.json())
-            .then((data) => window.location.reload(true));
+            .then(() => window.location.reload(true));
     };
 
-    // UPDATE INFORMTION OF FURNITURE
+    // UPDATE INFORMATION OF FURNITURE
     const ApiUpdateInformationFurniture = (id, furniture) => {
         console.log(id, furniture)
         fetch("http://localhost:4000/users/furnitures/" + id, {
@@ -60,7 +59,7 @@ export default function Admin() {
             body: JSON.stringify(furniture),
         })
             .then((response) => response.json())
-            .then((data) => window.location.reload(true));
+            .then(() => window.location.reload(true));
     };
 
     const data = ApiAllAdmin(); 
