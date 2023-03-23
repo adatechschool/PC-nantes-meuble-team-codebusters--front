@@ -18,7 +18,6 @@ const backGround = {
 
 export default function Admin() {
 
-    console.log(getStoredToken());
     if (getStoredToken() !== "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NDE5Yjc2OTUyNTRhY2RjNDYyNzJjZDQiLCJlbWFpbCI6ImxhdXJlbGluZS5mbGV1cnlAZ21haWwuY29tIn0.4pFpu9CGjQ4crv0nw8fjlxUOMYVDXi1DOGPC3i69LR8") {
       window.location.href = "/login";
     }
