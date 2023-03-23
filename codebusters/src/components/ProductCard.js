@@ -1,8 +1,28 @@
 import { ApiUnique } from "../data/Api.js";
 import Carousel from "react-bootstrap/Carousel";
 import { useParams } from "react-router-dom";
-import PanierWhite from "./buttons/Panierwhite";
+//import PanierWhite from "./buttons/Panierwhite";
 import React, { useEffect, useState } from "react";
+import { BsBasket2} from "react-icons/bs";
+import Button from 'react-bootstrap/Button';
+
+
+const colorBasket = {
+    color: 'white',
+    width: '31px',
+    height: '30px',
+    margin:"1rem",
+};
+  
+const buttonStyle={
+    textTransform: "uppercase",
+    borderRadius:"1em",
+    background:"lightsalmon",
+    marginTop: "3rem",
+    paddingRight:"5vh",
+    paddingLeft:"4vh",
+    // marginBottom:"10rem",
+}
 
 const cardStyle = {
   display: "flex",
@@ -13,7 +33,10 @@ const cardStyle = {
 };
 
 const cardUnique = {
-    display:"flex",
+  display:"flex",
+  flexDirection:"column",
+  maxWidth: "25rem",
+  maxHeight: "30rem",
   marginTop: "10rem",
   borderRadius: "1em",
 };
@@ -34,14 +57,10 @@ const textUnique = {
 };
 
 const subText = {
-    display:"flex",
+  display:"flex",
   color: "black",
   textAlign: "center",
   letterSpacing: "1.3px",
-};
-
-const panierWhite = {
-  display: "none",
 };
 
 export default function Cards() {
@@ -110,14 +129,11 @@ export default function Cards() {
               <h1>{furniture.price}€</h1>
             </div>
             <div>
-              <button
-                onClick={() => addToCard(furniture._id)}
-                type="button"
-                class="btn btn-primary"
-              >
-                Add to card (Waitin button)
-              </button>
-              <PanierWhite style={panierWhite} />
+              
+                <Button onClick={() => addToCard(furniture._id)} variant="outline-light" style={buttonStyle}>
+                  <BsBasket2 style={colorBasket}/>Ajouter au Panier
+                </Button>
+               
             </div>
           </div>
         </div>
