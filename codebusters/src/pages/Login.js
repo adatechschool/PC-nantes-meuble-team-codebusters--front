@@ -38,8 +38,8 @@ export default function Login() {
       document.getElementById("inputLoginEmail").value,
       document.getElementById("inputLoginPassword").value
     );
-    console.log(response);
-    if(document.getElementById("inputLoginEmail").value === "laureline.fleury@gmail.com") {
+    
+    if(response.rights.rights === true) {
       window.location.href = "/admin";
     } else {
       window.location.href = "/user";
