@@ -48,45 +48,37 @@ export async function findUserFurnitures() {
 }
 
 export async function createFurniture(
-  date,
   category,
   type,
   price,
   photos,
   description,
-  availability
 ) {
   const url = buildUrl("/furnitures");
   const response = await fetch(url, {
     method: "POST",
     headers: buildHeaders(),
     body: JSON.stringify({
-      date: date,
       category: category,
       type: type,
-      price: price,
+      price: parseFloat(price),
       photos: photos,
-      description: description,
-      availability: availability,
+      description: description
     }),
-  })
+  });
   return await response.json();
 }
 
-export async function createUser(
-  name,
-  email,
-  password
-  ) {
-    const url = buildUrl("/users");
-    const response = await fetch(url, {
-      method: "POST",
-      headers: buildHeaders(),
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-      }),
-    })
-    return await response.json();
-  }
+export async function createUser(name, email, password) {
+  const url = buildUrl("/users");
+  const response = await fetch(url, {
+    method: "POST",
+    headers: buildHeaders(),
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      password: password,
+    }),
+  });
+  return await response.json();
+}

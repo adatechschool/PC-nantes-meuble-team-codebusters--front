@@ -16,9 +16,13 @@ function searchButton () {
         background:"none",
     
     }
+    const searchStyle={
+        display: "flex",
+        justifyContent: "center",
+    }
 
     return (
-        <div>
+        <div style={searchStyle}>
            <Button variant="outline-light" style={buttonStyle}>
                 <BsSearch style={colorSearch}/>
             </Button>

@@ -41,3 +41,4 @@ export function ApiOneCategory(idFurniture) {
     console.log("API",data)
   return data;
 }
+
