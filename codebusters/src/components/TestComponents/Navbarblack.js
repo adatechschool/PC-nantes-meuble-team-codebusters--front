@@ -1,10 +1,10 @@
 import Panierblack from '../buttons/Panierblack';
-import Searchblack from '../buttons/Searchblack';
 import Menublack from '../buttons/Menublack';
-import IconFavoriteblack from '../buttons/IconFavoriteblack';
+import Logout from '../buttons/Logout';
 import UserButtonBlack from '../buttons/UserButtonBlack'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+
 import "../../assets/fonts/Vintage.ttf";
 import Cookies from 'universal-cookie';
 import { getStoredToken } from '../../data/ApiController';
@@ -61,9 +61,8 @@ function Navbarblack () {
       <Container style={{marginRight: "8em"}}>
         <Navbar.Brand href="/"><Menublack/></Navbar.Brand>
         <Container style={containerRight}>
-        <Navbar.Brand href=""><Searchblack/></Navbar.Brand>
         <Navbar.Brand href="/cart"><Panierblack/></Navbar.Brand>
-        <Navbar.Brand onClick = {deleteCookie} href="/login"><IconFavoriteblack/></Navbar.Brand>
+        <Navbar.Brand onClick = {deleteCookie} href="/login"><Logout/></Navbar.Brand>
         <Navbar.Brand onClick={ifLoggedIn}><UserButtonBlack/></Navbar.Brand>
         </Container>
         </Container>

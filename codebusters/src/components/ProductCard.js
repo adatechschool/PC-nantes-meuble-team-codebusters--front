@@ -7,22 +7,22 @@ import { BsBasket2} from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
 
 
-  const colorBasket = {
-      color: 'white',
-      width: '31px',
-      height: '30px',
-      margin:"1rem",
-  };
+const colorBasket = {
+    color: 'white',
+    width: '31px',
+    height: '30px',
+    margin:"1rem",
+};
   
-  const buttonStyle={
-      textTransform: "uppercase",
-      borderRadius:"1em",
-      background:"lightsalmon",
-      marginTop: "3rem",
-      paddingRight:"5vh",
-      paddingLeft:"4vh",
-      // marginBottom:"10rem",
-  }
+const buttonStyle={
+    textTransform: "uppercase",
+    borderRadius:"1em",
+    background:"lightsalmon",
+    marginTop: "3rem",
+    paddingRight:"5vh",
+    paddingLeft:"4vh",
+    // marginBottom:"10rem",
+}
 
 const cardStyle = {
   display: "flex",
@@ -33,7 +33,10 @@ const cardStyle = {
 };
 
 const cardUnique = {
-    display:"flex",
+  display:"flex",
+  flexDirection:"column",
+  maxWidth: "25rem",
+  maxHeight: "30rem",
   marginTop: "10rem",
   borderRadius: "1em",
 };
@@ -54,14 +57,10 @@ const textUnique = {
 };
 
 const subText = {
-    display:"flex",
+  display:"flex",
   color: "black",
   textAlign: "center",
   letterSpacing: "1.3px",
-};
-
-const panierWhite = {
-  display: "none",
 };
 
 export default function Cards() {
