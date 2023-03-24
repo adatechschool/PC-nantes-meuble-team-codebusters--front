@@ -6,6 +6,22 @@
     height: 40vmin;
     pointer-events: none;
   }
+#dropdown-basic-button{
+  color: black;
+  background: white;
+  border-color: lightsalmon;
+  display: flex;
+  align-items: start;
+  align-items: center;
+  margin-left: 35vh;
+}
+  button{
+    display: flex;
+  align-items: center;
+  background: white;
+  border: grey;
+  margin-top: 3vh;
+  }
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
