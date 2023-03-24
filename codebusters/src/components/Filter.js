@@ -2,15 +2,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Api } from "../data/Api.js";
 
-// const filterbutton={
-//   display: "flex",
-//   alignItems: "center",
-//   background: "grey",
-//   border: "grey",
-//   marginLeft: "31vh",
-//   marginTop: "3vh",
-// }
-
 function BasicButtonExample() {
   const data = Api();
   // REDUIT LE NOMBRE D'OCCURENCE DES CATEGORIES 

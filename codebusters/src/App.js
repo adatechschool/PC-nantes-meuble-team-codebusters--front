@@ -16,6 +16,7 @@ const footerStyle={
 const pageStyle={
   minHeight:"100vh", 
 }
+
 export default function App() {
   return (
     <div className="App" style = {{backgroundColor: "#FBF4F4"}}>

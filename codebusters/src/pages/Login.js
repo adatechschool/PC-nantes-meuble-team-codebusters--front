@@ -52,6 +52,8 @@ export default function Login() {
       document.getElementById("inputNewUserEmail").value,
       document.getElementById("inputNewUserPassword").value
     );
+    alert("Votre compte a bien été créé");
+    window.location.href = "/login";
     console.log(response);
   }
 
