@@ -14,13 +14,13 @@
   align-items: start;
   align-items: center;
   margin-left: 35vh;
+  margin-top: 3vh;
 }
   button{
     display: flex;
   align-items: center;
   background: white;
   border: grey;
-  margin-top: 3vh;
   }
   
   @media (prefers-reduced-motion: no-preference) {
