@@ -40,18 +40,21 @@ const nav = {
 
 
 function Navbarblack () {
-
+  // Fonction pour supprimer le cookie "token"
   function deleteCookie() {
     const cookie = new Cookies();
     cookie.remove("token");
   }
-
+  // Fonction pour rediriger en fonction de l'état de connexion
   function ifLoggedIn() {
     if(getStoredToken() === undefined) {
+      // Si aucun token n'est stocké, redirige vers la page de connexion
       window.location.href = "/login";
     } else if (getStoredToken() === "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2NDE5Yjc2OTUyNTRhY2RjNDYyNzJjZDQiLCJlbWFpbCI6ImxhdXJlbGluZS5mbGV1cnlAZ21haWwuY29tIn0.4pFpu9CGjQ4crv0nw8fjlxUOMYVDXi1DOGPC3i69LR8") {
+      // Si le token stocké correspond à un token spécifique, redirige vers la page d'administration
       window.location.href = "/admin";
     } else {
+      // Sinon, redirige vers la page utilisateur
       window.location.href = "/user"
     }
   }

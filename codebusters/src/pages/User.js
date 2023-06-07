@@ -48,6 +48,7 @@ async function newFurniture(event) {
 }
 
 export default function PostNewFurniture() {
+  //Utilise le hook "useState" pour déclarer une variable d'état "furniture" initialisée avec un tableau
   const [furniture, setFurniture] = useState([]);
   const [userInfo, setUserInfo] = useState({name : "", email : ""});
   useEffect(() => {
